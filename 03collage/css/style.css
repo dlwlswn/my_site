@@ -1,7 +1,29 @@
 @charset "utf-8";
 /*header*/
-header#header{height: 160px;}
+header#header{width: 100%;height: 160px;background: #0044af;}
+header#header .top{width: 1200px;margin: 0 auto;}
+header#header .top .topLeft{width: 364px;float: left;}
+header#header .top .topLeft a{
+	display: block;height: 40px;width: 120px;
+	background: #00163b;float: left;text-align:
+	center;line-height: 40px; color:#fff; margin-right: 2px;
+}
+header#header .top .topLeft li:nth-child(1) a{background-color: #fff;color: black}
+header#header .top .topLeft li:nth-child(2) a{}
+header#header .top .topLeft li:nth-child(3) a{margin-right: -2px;}
 
+header#header .top .topRight{width: 288px;float: right;}
+header#header .top .topRight a{display: block;height: 40px;width:15% ;float: left;font-size: 12px;}
+header#header .top .topRight li:nth-child(1) a{width: 44px;margin-left: 7px;}
+header#header .top .topRight li:nth-child(2) a{margin-left: 7px;width: 16px;margin-right: 2px;}
+header#header .top .topRight li:nth-child(3) a{width: 16px;}
+header#header .top .topRight li:nth-child(4) a{}
+header#header .top .topRight li:nth-child(5) a{}
+header#header .top .topRight li:nth-child(6) a{}
+
+
+header#header .menubar{width: 100%;height: 120px;background: #fff;}
+header#header .bottom{width: 1200px;height: 120px;margin: 0 auto;}
 
 /*contents*/
 #contents{
