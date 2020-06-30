@@ -130,12 +130,6 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
     text-align: right;}
 
 
-.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    width: 100%;
-}
 
 .boxTwo{position: relative;}
 .boxTwo .boxTwoTxt{font-size: 2.2em;color: white}
@@ -157,7 +151,7 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 .boxThree .linkTwo{width: 100px;float: left;}
 .boxThree .linkThree{width: 100px;float: left;}
 .boxThree .link a{}
-.boxThree .linkOne p, .boxThree .linkTwo p, .boxThree .linkTree p{font-size: 10px;}
+.boxThree .linkOne p, .boxThree .linkTwo p, .boxThree .linkThree p{font-size: 10px;}
 
 
 .boxFour{color: white;}
