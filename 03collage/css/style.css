@@ -126,6 +126,16 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 	margin-bottom: 0;	
 }
 
+.bx-wrapper .bx-pager {
+    text-align: right;}
+
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 100%;
+}
 
 .boxTwo{position: relative;}
 .boxTwo .boxTwoTxt{font-size: 2.2em;color: white}
@@ -139,13 +149,60 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 	border: 1px solid #fff;color: white;font-size: initial;top: 345px;
 }
 
-.boxThree{color:white; position: relative;}
-.boxThree .boxThreeTxt
-.boxThree h2{}
-.boxThree .link{}
-.boxThree .link img{}
-.boxThree .link p{}
+.boxThree{color:white;}
+.boxThree .boxThreeTxt{}
+.boxThree h2{padding: 20px;margin-bottom: 10px;}
+.boxThree .boxTT{width: 300px;margin: 0 auto;text-align: center;}
+.boxThree .linkOne{width: 100px;float: left;}
+.boxThree .linkTwo{width: 100px;float: left;}
+.boxThree .linkThree{width: 100px;float: left;}
+.boxThree .link a{}
+.boxThree .linkOne p, .boxThree .linkTwo p, .boxThree .linkTree p{font-size: 10px;}
 
+
+.boxFour{color: white;}
+.boxFour h2{width: 260px;margin: 0 auto;border-bottom: 2px solid white;line-height: 60px;margin-bottom: 10px;margin-top: 15px;}
+.boxFour .boxFourTxt{line-height: 30px;display: block;font-size: 14px;} 
+.boxFour .boxFourTxt .fourTxt a{height: 30px;display: block;width: 300px; float: left;color: white}
+.boxFour .boxFourTxt .fourTxt a p{color: white;line-height: 30px;}
+.boxFour .boxFourTxt .fourTxt .firstP{float: left;width: 180px;margin-left: 20px;}
+.boxFour .boxFourTxt .fourTxt .lastP{float: right;width: 75px;margin-right: 25px;}
+
+
+.boxFive{width: 300px;height: 225px;}
+.boxFive h2{margin: 20px;font-weight: bold;}
+.boxFive .boxFiveTxt{float: left;}
+.boxFive img{float: left; margin: 0 22px}
+.boxFive p{float: left;font-size: 14px;margin-bottom: 30px;}
+.boxFive .snsLogo{margin-right: 12px;}
+.boxFive .snsLogo a{float: right;width: 30px;height: 30px; text-indent: -9999px;margin: 3px;}
+.boxFive .snsLogo a:nth-child(1){background-image: url(../images/box5_lg1.png); }
+.boxFive .snsLogo a:nth-child(2){background-image: url(../images/box5_lg2.png); }
+.boxFive .snsLogo a:nth-child(3){background-image: url(../images/box5_lg3.png); }
+.boxFive .snsLogo a:nth-child(4){background-image: url(../images/box5_lg4.png); }
+
+
+.boxSix{position: relative;width: 300px;height: 225px;}
+.boxSix img{position: absolute;width: 300px;height: 225px;}
+.boxSix .sixTxt{position: absolute;}
+.boxSix a{
+	display: block;position: absolute
+	;top: 173px;width: 300px;height: 52px;
+	background-color: rgba(0,0,0,0.5);
+	color: white; text-align: center;
+	line-height: 52px; font-weight: bold; font-size: 18px;
+}
+
+.boxSeven{position: relative;width: 300px;height: 225px;}
+.boxSeven img{position: absolute;width: 300px;height: 225px;}
+.boxSeven .sevenPlay{position: absolute;}
+.boxSeven a{
+	display: block;position: absolute;
+	width: 62px;height: 62px;background-color: rgba(0,0,0,0.5);
+	color: white; text-align: center;
+	line-height: 60px; font-size:30px;
+	left: 119px; top: 81.5px;border-radius: 40px;
+}
 
 /*footer*/
 footer#footer{
