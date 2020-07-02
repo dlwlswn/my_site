@@ -52,7 +52,7 @@ header#header .bottom .menu{
 	float: left;margin-left: 180px;font-size: 18px;font-weight: bold;}
 header#header .bottom .menu li{float: left;}
 header#header .bottom .menu li a{
-	line-height: 120px;display: block;float: left;width: 138px;text-align: center;}
+	white-space: nowrap;	line-height: 120px;display: block;float: left;width: 138px;text-align: center;}
 /*header#header .bottom .menu li a:hover{background: #385f88;color: #fff}*/
 header#header .bottom .icon{float: right;margin: 35px 0;}
 header#header .bottom .icon a{
@@ -72,10 +72,39 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 	width: 1200px;height: 260px;_background:#aaa;
 	margin:auto;
 }
-#contents .title .leftTxt{color: #fff;}
-#contents .title .leftTxt h3{}
-#contents .title .leftTxt h2{}
+#contents .title .leftTxt{float: left;margin-top: 85px;color: #fff;height: 120px;}
+#contents .title .leftTxt h3{font-size: 2.3em;}
+#contents .title .leftTxt h2{font-size: 3em;}
 
+#contents .title .right_icon{
+	float: right;color: #fff;
+
+}
+#contents .title .right_icon .right{
+	width: 120px;height: 150px;
+	_background-color: #f00;float: left;
+}
+#contents .title .right_icon .right a{
+display: block;width: 106px;height: 106px;
+	background-image: url(../images/right_icon.png);
+	border: 4px solid #fff; border-radius: 100px;
+	margin: 0 auto; margin-bottom: 10px;
+	text-indent: -9999px;margin-top: 60px;}
+#contents .title .right_icon :nth-child(1).right a{
+	background-position: -13px -7px
+}
+#contents .title .right_icon :nth-child(2).right a{
+	background-position: -110px -7px
+}
+#contents .title .right_icon :nth-child(3).right a{
+	background-position: -203px -7px
+}
+#contents .title .right_icon :nth-child(4).right a{
+	background-position: -286px -7px
+}
+#contents .title .right_icon .right p{
+	text-align: center;white-space: nowrap;
+}
 
 #contents .container{width: 1200px;margin: 0 auto;}
 #contents .container li{
@@ -127,7 +156,11 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 }
 
 .bx-wrapper .bx-pager {
-    text-align: right;}
+   
+    bottom: 200px;
+    width: 100px;
+   right: 0;
+   }
 
 
 
@@ -154,7 +187,7 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 .boxThree .linkOne p, .boxThree .linkTwo p, .boxThree .linkThree p{font-size: 10px;}
 
 
-.boxFour{color: white;}
+.boxFour{color: white;white-space: nowrap;}
 .boxFour h2{width: 260px;margin: 0 auto;border-bottom: 2px solid white;line-height: 60px;margin-bottom: 10px;margin-top: 15px;}
 .boxFour .boxFourTxt{line-height: 30px;display: block;font-size: 14px;} 
 .boxFour .boxFourTxt .fourTxt a{height: 30px;display: block;width: 300px; float: left;color: white}
@@ -167,7 +200,7 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 .boxFive h2{margin: 20px;font-weight: bold;}
 .boxFive .boxFiveTxt{float: left;}
 .boxFive img{float: left; margin: 0 22px}
-.boxFive p{float: left;font-size: 14px;margin-bottom: 30px;}
+.boxFive p{height: 80px;white-space: nowrap;width: 140px;float: left;font-size: 14px;margin-bottom: 30px;top: 0px;}
 .boxFive .snsLogo{margin-right: 12px;}
 .boxFive .snsLogo a{float: right;width: 30px;height: 30px; text-indent: -9999px;margin: 3px;}
 .boxFive .snsLogo a:nth-child(1){background-image: url(../images/box5_lg1.png); }
@@ -198,7 +231,33 @@ header#header .bottom .icon a:nth-child(2){background-image: url(../images/icon0
 	left: 119px; top: 81.5px;border-radius: 40px;
 }
 
+
+.main_bottom{
+	width: 1200px;height: 60px;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 930px;
+}
+
+
+
 /*footer*/
 footer#footer{
-	height: 200px;
+	height: 200px;width: 100%;
 }
+#footer .footer{
+	width: 1200px;height: 200px;
+	margin: 0 auto;
+}
+#footer .footer .footer_txt{
+	float: right;height: 155px;width: 900px;_background-color: #f00;}
+#footer .footer ul{padding: 10px 0; }
+#footer .footer ul li{float: left;border-right: 1px solid #000;}
+#footer .footer ul li a{line-height: 20px;font-weight: bold;font-size: 15px;margin: 0 20px 0 20px}
+#footer .footer ul li:nth-child(6){
+	border-right: 0 none;
+}
+#footer .footer p{color: #7f7f7f; line-height: 25px;padding: 0 20px ;}
+#footer .footer h4{color: #7f7f7f;padding: 5px 20px 0;}
+
+

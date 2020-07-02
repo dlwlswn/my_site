@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*header*/
+header{
+	background-color: #0d72a8;
+	width: 100%;height: 87px;
+	
+}
+	#header{
+		width: 1565px;height: 87px;
+		_background-color: #f00;margin: 0 auto;
+		background-image: url(../images/header_air.jpg);
+		background-repeat:no-repeat;
+	}
+	#header .header{
+		width: 980px;height: 87px;margin: 0 auto
+	}
+	#header .header h1{width: 145px;}
+	#header .header h1 a{
+		text-align: center;
+		display: block;
+		line-height: 87px;color: #fff
+	}
