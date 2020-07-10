@@ -7,12 +7,19 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$(".vSlider").bxSlider({pager:false});
 			$(".bSlider").bxSlider({controls:false,auto:true});
+			$(".youtube").colorbox({
+				iframe:true,
+				innerWidth:600,
+				innerHeight:337
+			})
 		});
 	</script>
 </head>
@@ -184,7 +191,7 @@
 					<div class="boxSeven">
 						<img src="images/box7_01.jpg" alt="">
 						<div class="sevenPlay">
-							<a href="#">▶</a>
+							<a href="https://www.youtube.com/embed/rMIVHB42H4Q" class="youtube" title="영상">▶</a>
 						</div>
 					</div>
 				</li>
