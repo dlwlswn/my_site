@@ -104,3 +104,35 @@ header{
 #visual .top_left ul li a span{float: right;color: #6fc467}
 
 #visual .top_right{width: 482px;height: 556px;background: pink;float: right;margin-top: 56px;}
+
+
+#visual .visual_bottom{width: 980px;height: 495px;margin: 0 auto;_background: #555;}
+#visual .visual_bottom ul{}
+#visual .visual_bottom ul li{margin-top: 16px;float: left; width:233px;height: 241px; background: #111;margin-right: 16px;background-repeat: no-repeat;}
+#visual .visual_bottom ul li:nth-child(1){
+	background-image: url(../images/03여행03.jpg) ;background-size: 
+}
+#visual .visual_bottom ul li:nth-child(2){
+	background-image: url(../images/03여행04.jpg) ;
+}
+#visual .visual_bottom ul li:nth-child(3){
+	background-image: url(../images/03여행05.jpg) ;
+}
+#visual .visual_bottom ul li:nth-child(4){
+	background-image: url(../images/03여행06.jpg) ;margin-right: 0;
+}
+#visual .visual_bottom ul li:nth-child(5){
+	background-image: url(../images/03여행07.jpg) ;background-position: -15px 0;
+}
+#visual .visual_bottom ul li:nth-child(6){
+	background-image: url(../images/03여행08.jpg) ;background-position: -60px -20px;
+}
+#visual .visual_bottom ul li:nth-child(7){
+	background-image: url(../images/03여행09.jpg) ;background-position: -40px 0;
+}
+#visual .visual_bottom ul li:nth-child(8){
+	background-image: url(../images/03여행10.jpg) ;background-position: -130px -50px;margin-right: 0;
+}
+
+
+
