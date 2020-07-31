@@ -92,7 +92,7 @@ header{
 }
 #visual .visual_top .top_left{
 	width: 482px;margin-top: 56px;
-	height: 556px;float: left; background: blue;
+	height: 556px;float: left; _background: blue;
 }
 #visual .top_left ul{}
 #visual .top_left ul li{position: relative;}
@@ -103,7 +103,7 @@ header{
 #visual .top_left ul li a{font-size: 18px;font-weight: bold;display: block;width: 233px;height: 50px;background: #152630;margin-top: -30px;color: white;position: absolute;padding: 0 15px ;;line-height: 50px;}
 #visual .top_left ul li a span{float: right;color: #6fc467}
 
-#visual .top_right{width: 482px;height: 556px;background: pink;float: right;margin-top: 56px;}
+#visual .top_right{width: 482px;height: 556px;_background: pink;float: right;margin-top: 56px;}
 
 
 #visual .visual_bottom{width: 980px;height: 495px;margin: 0 auto;_background: #555;}
@@ -133,6 +133,19 @@ header{
 #visual .visual_bottom ul li:nth-child(8){
 	background-image: url(../images/03여행10.jpg) ;background-position: -130px -50px;margin-right: 0;
 }
+
+
+#visual .visual_bottom ul li a{width: 233px;height: 241px;display: block;background-color: #ffc9c9;overflow: hidden;color: #fff}
+#visual .visual_bottom ul li .box_one{margin-top: 176px;}
+#visual .visual_bottom ul li .box_two{margin-top: 176px;}
+#visual .visual_bottom ul li .box_three{margin-top: 176px;opacity: 0.5}
+#visual .visual_bottom ul li .box_four{margin-top: 176px;}
+#visual .visual_bottom ul li .box_five{opacity: 0.5}
+#visual .visual_bottom ul li .box_six{opacity: 0.5}
+#visual .visual_bottom ul li .box_seven{opacity: 0.5}
+#visual .visual_bottom ul li .box_eight{opacity: 0.5}
+
+
 
 
 
