@@ -14,7 +14,46 @@
 	<script>
 		$(document).ready(function(){
 			$(".slider").bxSlider();
+
+			var txt = $("#txt").offset().top;
+			var dk1 = $("#dk1").offset().top;
+			var dk2 = $("#dk2").offset().top;
+			var dk3 = $("#dk3").offset().top;
+			var winHeight = $(document).height();
+			$(".winHeight").html(winHeight);
+
+			$(window).scroll(function(){
+				var scrollY = $(window).scrollTop();
+				$(".scrollY").html(scrollY);
+
+				if(txt < scrollY+300){
+					$("#txt").addClass("move");
+				}else{
+					$("#txt").removeClass("move")
+				}
+
+				if(dk1 < scrollY+300){
+					$("#dk1").addClass("move");
+				}else{
+					$("#dk1").removeClass("move")
+				}
+
+				if(dk2 < scrollY+300){
+					$("#dk2").addClass("move");
+				}else{
+					$("#dk2").removeClass("move")
+				}
+
+				if(dk2 < scrollY+300){
+					$("#dk3").addClass("move");
+				}else{
+					$("#dk3").removeClass("move")
+				}
+
+			});
+
 		});
+
 	</script>
 </head>
 <body>
@@ -93,10 +132,10 @@
 	</header>
 	<div id="visual">
 		<div class="visual_img">
-			<img src="images/summer3_emblem.png" alt="summer3_emble">
-			<img src="images/summer3_bev1.png" alt="summer1">
-			<img src="images/summer3_bev2.png" alt="summer2">
-			<img src="images/summer3_bev3.png" alt="summer3">
+			<img src="images/summer3_emblem.png" alt="summer3_emble" id="txt">
+			<img src="images/summer3_bev1.png" alt="summer1" id="dk1">
+			<img src="images/summer3_bev2.png" alt="summer2" id="dk2">
+			<img src="images/summer3_bev3.png" alt="summer3" id="dk3">
 		</div>
 	</div>
 	<div class="sns_review">
