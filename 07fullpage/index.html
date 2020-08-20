@@ -4,28 +4,150 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>fullpage</title>
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/fullpage.css">
-	<script src="../js/jquery-3.1.1.min.js"></script>
-	<script src="../js/jquery.fullpage.js"></script>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	<script>
+		$(function(){
+
+			$("#fullpage").fullpage({
+				anchors:["a1st","a2st","a3st","a4st"],
+				menu:"#topMenu",
+				navigation:true,
+				navigationPosition: 'right',
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if(index == 1){
+						$("#onViewOne").addClass("move");
+					}else{
+						$("#onViewOne").removeClass("move");
+					}
+
+					if(index == 2){
+						$("#onViewTwo").addClass("move");
+					}else{
+						$("#onViewTwo").removeClass("move");
+					}
+				}
+			});
+		});
+	</script>
 	<style>
-		#navTop #topMenu li{float: left;}
+		#page1{_background-image: url(images/bg1.jpg);}
+		#page2{background-color: #f6f6f6;);}
+		#page3{background-image: url(images/bg3.jpg);}
+		#page4{background-image: url(images/bg4.jpg);}
+
+		.section{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size:cover;
+		}
+
+		nav#navTop{
+			position: fixed;z-index:1;width: 100%;
+			background-color: rgba(220,220,220,0.5);
+		}
+		nav#navTop h1{float: left;}
+		nav#navTop h1 a{display: block;line-height: 70px;text-align: center;width: 180px;margin-left: 30px;text-indent: -9999px;background-image: url(images/logo2.png);background-repeat: no-repeat;background-position: center;}
+		nav#navTop ul{float: right;margin-right: 30px;}
+		nav#navTop li{float: left;}
+		nav#navTop li a{display: block;line-height:70px;text-align: center;padding: 0 10px;}
+
+		nav#navTop li.active{background-color:rgba(220,220,220,0.9);}
+		.scroll{
+			position: absolute;left: 50%;transform:translateX(-50%);
+			bottom: 20px;animation:xScroll 0.8s infinite alternate;
+		}
+		@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}
+		}
+		.main{
+			width: 400px;position: absolute;left: 50%;top:30%;transform: translateX(-50%);
+			color:white;text-align: center;
+		}
+		.main a{
+			display: block;width: 150px;
+			border: 1px solid #fff;line-height: 35px;
+			color:white;border-radius:18px;margin: 0 auto;
+		}
+		.main a:hover{background-color: #ffffff;color:#000;}
+	
+		#event_menu{width: 1000px;height: 500px;margin: 0 auto;}
+		.cm_event{float: left;width: 300px;margin-right: 20px;border: 1px solid #000;}
+		.cm_event .event_icon{position: absolute;}
+		.cm_event h3{text-align: center;}
+		.cm_event p{text-align: center;}
+		.cm_event a{}
+		.cm_event img{}
+
+		#onViewOne{top:10%;transition:0.3s;opacity:0;}
+		#onViewOne.move{top:30%;opacity:1;}
+
+		#onViewTwo{left:10%;transition:0.3s;opacity:0;}
+		#onViewTwo.move{left:50%;opacity:1;}
+
+
+
+		.f3em{font-size:3em !important}
+		.f25em{font-size:2.5em !important}
+		.f2em{font-size:2em !important}
+		.f15em{font-size:1.5em !important}
+		.mb20{margin-bottom: 20px !important;}
 	</style>
 </head>
 <body>
-	<nav id="navTop">
+	<nav id="navTop" class="clearfix">
 		<!-- ul#topMenu>li*4>a[#a$st]>{MENu$} -->
+		<h1><a href="#">logo</a></h1>
 		<ul id="topMenu" class="clearfix">
-			<li data-menuanchor="a1st"><a href="#a1st">MENU1</a></li>
-			<li data-menuanchor="a2st"><a href="#a2st">MENU2</a></li>
-			<li data-menuanchor="a3st"><a href="#a3st">MENU3</a></li>
-			<li data-menuanchor="a4st"><a href="#a4st">MENU4</a></li>
+			<li data-menuanchor="a1st"><a href="#a1st">MENU</a></li>
+			<li data-menuanchor="a2st"><a href="#a2st">COMMUNITY</a></li>
+			<li data-menuanchor="a3st"><a href="#a3st">STORE</a></li>
+			<li data-menuanchor="a4st"><a href="#a4st">BRAND</a></li>
 		</ul>
 	</nav>
 
+	<style>
+		.carImg{
+			width: 100%;height: 100%;
+			background-image:url(images/main_menu.jpg);
+			background-position: 50% 60%;
+			background-repeat: no-repeat;
+			position: relative;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.carImg .pager{
+			position: absolute;
+			left:50%;transform: translateX(-50%);
+			bottom:150px;
+		}
+		.carImg .pager>span{display: inline-block;
+			width: 20px;height: 20px;border-radius:10px;text-indent: -9999px;
+			border: 1px solid #730f1e;cursor:pointer;
+		}
+		.carImg .pager span.active{background-color: #730f1e;}
 
+	</style>
+	<script>
+		$(function(){
+			$(".pager>span").click(function(){
+				var i = $(this).index()*50;
 
-
+				$(".carImg").stop().animate({"background-position-x":i+"%"},300)
+				$(".pager>span").removeClass("active").eq($(this).index()).addClass("active");
+			});
+		})
+	</script>
+	<style>
+		#video{
+			position: absolute;width: 100%;height: 100%;
+			object-fit:cover;top:0;
+		}
+	</style>
 	<div id="fullpage">
 		<div class="section" id="page1" data-anchor="a1st">
 			
@@ -46,19 +168,45 @@
 			</div>
 		</div>
 		<div class="section" id="page2" data-anchor="a2st">
-			<video id="video" autoplay muted data-autoplay loop>
-				<source src="video/video.mp4" type="video/mp4">
-			</video>
-			<div class="main" id="onViewTwo">
+			<ul class="clearfix" id="event_menu">
+				<li class="cm_event">
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_01.jpg" alt=""></a>
+				</li>
+				<li class="cm_event">
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_02.jpg" alt=""></a>
+				</li>
+				<li class="cm_event">
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_03.jpg" alt=""></a>
+				</li>
+				<li class="cm_event">
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_04.jpg" alt=""></a>
+				</li>
+				<li class="cm_event">
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_05.jpg" alt=""></a>
+				</li>
+				<li class="cm_event">
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_06.jpg" alt=""></a>
+				</li>
+					
+			</ul>
+			<!-- <video id="video" autoplay muted data-autoplay loop>
+			<source src="video/video.mp4" type="video/mp4">
+			</video> -->
+			<!-- <div class="main" id="onViewTwo">
 				<h3 class="f25em">Lorem ipsum.</h3>
 				<p class="f15em mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, voluptas?	</p>
 				<a href="#">MORE</a>
-			</div>
+				
+			</div> -->
 			<div class="scroll">
 				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
-		<div class="section" id="page3" data-anchor="a3st"></div>
+		<div class="section" id="page3" data-anchor="a3st">
+			<div class="scroll">
+				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
 		<style>
 			.slide{position: relative;}
 			.slide div{position: absolute;width: 100%;height: 100%;left:0;top:0;}
