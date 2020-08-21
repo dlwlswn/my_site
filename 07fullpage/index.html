@@ -36,8 +36,8 @@
 	<style>
 		#page1{_background-image: url(images/bg1.jpg);}
 		#page2{background-color: #f6f6f6;);}
-		#page3{background-image: url(images/bg3.jpg);}
-		#page4{background-image: url(images/bg4.jpg);}
+		#page3{_background-image: url(images/bg3.jpg);}
+		#page4{_background-image: url(images/bg4.jpg);}
 
 		.section{
 			background-repeat: no-repeat;
@@ -75,13 +75,17 @@
 		}
 		.main a:hover{background-color: #ffffff;color:#000;}
 	
-		#event_menu{width: 1000px;height: 500px;margin: 0 auto;}
-		.cm_event{float: left;width: 300px;margin-right: 20px;border: 1px solid #000;}
-		.cm_event .event_icon{position: absolute;}
-		.cm_event h3{text-align: center;}
-		.cm_event p{text-align: center;}
-		.cm_event a{}
-		.cm_event img{}
+		#event_menu{width: 1200px;height:500px;margin: 0 auto;}
+		.cm_event{position: relative;float: left;width: 350px;height: 480px;_border: 1px solid #000;margin-right: 15px;margin-bottom: 15px;background-color: #fff; transition: 0.1s; cursor: pointer;}
+		
+		.cm_event h3{line-height: 50px;font-size: 16px;text-indent: 60px;letter-spacing: -0.42px;}
+		.cm_event p{font-size: 21px;margin:5px 25px;letter-spacing: -0.42px;font-family: 'Nanum Gothic', sans-serif;}
+		.cm_event a{display: block;position: relative;}
+		.cm_event .event_icon{position: absolute;top: 10px;left: 20px;}
+		.cm_event .event_img{position: absolute;left: 25px;top: 130px;}
+		.cm_event:hover{background-color: #ac162c;}
+		.cm_event:hover h3{color: white;}
+		.cm_event:hover p{color: white;}
 
 		#onViewOne{top:10%;transition:0.3s;opacity:0;}
 		#onViewOne.move{top:30%;opacity:1;}
@@ -170,22 +174,22 @@
 		<div class="section" id="page2" data-anchor="a2st">
 			<ul class="clearfix" id="event_menu">
 				<li class="cm_event">
-					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_01.jpg" alt=""></a>
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>Notice</h3><p>[이벤트] 9월 요기요 누구나페스티벌 프로모션 진행 (~9/6)</p><img src="images/event_01.jpg" alt="" class="event_img"></a>
 				</li>
 				<li class="cm_event">
-					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_02.jpg" alt=""></a>
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>Notice</h3><p>[이벤트] 죠스떡볶이 요기요 누구나페스티번 프로모션 진행</p><img src="images/event_02.jpg" alt="" class="event_img"></a>
 				</li>
 				<li class="cm_event">
-					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_03.jpg" alt=""></a>
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>Notice</h3><p>[이벤트] 죠스떡볶이 배달의 민족 할인 프로모션 진행 (~8/27)</p><img src="images/event_03.png" alt="" class="event_img"></a>
 				</li>
 				<li class="cm_event">
-					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_04.jpg" alt=""></a>
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>Notice</h3><p>[이벤트] 죠스떡볶이 요기요 즉시 할인 프로모션 진행 (~2/28)</p><img src="images/event_04.png" alt="" class="event_img"></a>
 				</li>
 				<li class="cm_event">
-					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_05.jpg" alt=""></a>
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>Notice</h3><p>[이벤트] 죠스떡볶이 8월 카카오 플러스친구 이벤트 제외 매장</p><img src="images/event_05.jpg" alt="" class="event_img"></a>
 				</li>
 				<li class="cm_event">
-					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>notice</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><img src="images/event_06.jpg" alt=""></a>
+					<a href="#"><img src="images/event_icon.png" alt="" class="event_icon"><h3>Notice</h3><p>죠스 어묵티 매운맛 더해져 업그레이드 ver 출시!</p><img src="images/event_06.jpg" alt="" class="event_img"></a>
 				</li>
 					
 			</ul>
@@ -203,17 +207,18 @@
 			</div>
 		</div>
 		<div class="section" id="page3" data-anchor="a3st">
-			<div class="scroll">
-				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
-			</div>
+
+
+
+			
 		</div>
 		<style>
 			.slide{position: relative;}
 			.slide div{position: absolute;width: 100%;height: 100%;left:0;top:0;}
-			.slide .view1{background-color: skyblue;}
-			.slide .view2{background-color: red;}
-			.slide .view3{background-color: blue;}
-			.slide .view4{background-color: yellow;}
+			.slide .view1{background-color: #555 ;}
+			.slide .view2{background-color: #666;}
+			.slide .view3{background-color: #777 ;}
+			.slide .view4{background-color: #888;}
 		</style>
 		<div class="section" id="page4" data-anchor="a4st">
 			<div class="slide">
@@ -224,6 +229,9 @@
 			</div>
 			<div class="slide">
 				<div class="view3">Libero necessitatibus tenetur, animi delectus accusamus! Labore commodi maxime ducimus, quibusdam laborum dignissimos placeat! Laborum a dolorum vero? Reiciendis modi repudiandae nobis, facere adipisci sapiente doloribus voluptate deserunt architecto assumenda.</div>
+			</div>
+			<div class="slide">
+				<div class="view4">Libero necessitatibus tenetur, animi delectus accusamus! Labore commodi maxime ducimus, quibusdam laborum dignissimos placeat! Laborum a dolorum vero? Reiciendis modi repudiandae nobis, facere adipisci sapiente doloribus voluptate deserunt architecto assumenda.</div>
 			</div>
 		</div>
 		<div class="section fp-auto-height" data-anchor="a5st">
