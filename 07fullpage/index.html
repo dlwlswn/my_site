@@ -261,9 +261,25 @@
 		<style>
 			.slide{position: relative;}
 			.slide div{position: absolute;width: 100%;height: 100%;left:0;top:0;}
-			.slide .view1{background-image: url(images/slider_01.jpg);}
-			.slide .view2{background-image: url(images/slider_02.jpg);}
-			.slide .view3{background-image: url(images/slider_03.jpg);}
+			.slide .view1,
+			.slide .view2,
+			.slide .view3{background-repeat: no-repeat;background-position: center;}
+			.slide .view1{background-color: #f1ece8;background-image: url(images/slider_01.jpg);}
+			.slide .view2{background-color: #ab162c;background-image: url(images/slider_02.jpg);}
+			.slide .view3{background-color: #f4f4f4;background-image: url(images/slider_03.jpg);}
+
+			.footer{height: 200px;width: 100%;background-color:#383838;}
+			.footer .ft_bottom{width: 1100px;margin: 0 auto;padding: 50px 0;}
+			.footer .ft_left{float: left;}
+			.footer .ft_left a{top: 50px;display: block;background-image: url(images/footer_logo.png);background-repeat: no-repeat;text-indent: -9999px;margin-bottom: 20px;}
+			.footer .ft_left p{font-size: 13px;line-height: 22px;color: #9c9c9c}
+			.footer .ft_right{float: right;width: 320px;position: relative;}
+			.footer .ft_right ul{}
+			.footer .ft_right ul li{float: right;}
+			.footer .ft_right ul li a{display: block;font-size: 13px; line-height: 19.5px; letter-spacing: -0.42px;color: white;margin-left: 15px;margin-bottom: 15px;}
+			.footer .ft_right img{position: absolute;left: 30px;top: 50px;}
+			.footer .ft_right h6{position: absolute;left: 90px;top: 45px;color:#db1d3b;font-size: 15px;font-weight: 700;letter-spacing: -0.42px;line-height:22px;margin-bottom: 15px;}
+			.footer .ft_right p{position: absolute;left: 90px;top: 70px;font-size: 13px;line-height: 21px;letter-spacing: -0.42px;color: #9c9c9c}
 		</style>
 		<div class="section" id="page4" data-anchor="a4st">
 			<div class="slide">
@@ -277,7 +293,25 @@
 			</div>
 		</div>
 		<div class="section fp-auto-height" data-anchor="a5st">
-			<div class="footer" style="height:300px;background-color:skyblue; "></div>
+			<div class="footer">
+				<div class="ft_bottom clearfix">
+					<div class="ft_left">
+						<a href="#"><h3>죠스</h3></a>
+						<p>대표이사 나상균 / 사업자등록번호 209-81-54096 / 서울특별시 언주로 147길 20<br>Copyright (C) JAWSFOOD ALL RIGHTS RESERVED</p>
+					</div>
+					<div class="ft_right">
+						<ul class="clearfix">
+							<li><a href="#">채용안내</a></li>
+							<li><a href="#">개인정보처리방침</a></li>
+							<li><a href="#">이용약관</a></li>
+							<li><a href="#">사이트맵</a></li>
+						</ul>
+						<img src="images/img_center.png" alt="">
+						<h6>02-927-1525</h6>
+						<p>오전 9시~오후 6시/주말 및 공휴일 휴무</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
